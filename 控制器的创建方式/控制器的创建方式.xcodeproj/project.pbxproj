@@ -13,6 +13,9 @@
 		9692F19C1D82EE77009F21CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9692F19A1D82EE77009F21CB /* Main.storyboard */; };
 		9692F19E1D82EE77009F21CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9692F19D1D82EE77009F21CB /* Assets.xcassets */; };
 		9692F1A11D82EE77009F21CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9692F19F1D82EE77009F21CB /* LaunchScreen.storyboard */; };
+		9692F1AB1D82EF0D009F21CB /* SYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9692F1A91D82EF0D009F21CB /* SYViewController.m */; };
+		9692F1AE1D82F186009F21CB /* SYView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9692F1AD1D82F186009F21CB /* SYView.xib */; };
+		9692F1B21D82F3B4009F21CB /* SYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9692F1B11D82F3B4009F21CB /* SYViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		9692F19D1D82EE77009F21CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9692F1A01D82EE77009F21CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9692F1A21D82EE77009F21CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9692F1A81D82EF0D009F21CB /* SYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYViewController.h; sourceTree = "<group>"; };
+		9692F1A91D82EF0D009F21CB /* SYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYViewController.m; sourceTree = "<group>"; };
+		9692F1AD1D82F186009F21CB /* SYView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYView.xib; sourceTree = "<group>"; };
+		9692F1B11D82F3B4009F21CB /* SYViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,10 @@
 				9692F1971D82EE77009F21CB /* ViewController.h */,
 				9692F1981D82EE77009F21CB /* ViewController.m */,
 				9692F19A1D82EE77009F21CB /* Main.storyboard */,
+				9692F1A81D82EF0D009F21CB /* SYViewController.h */,
+				9692F1A91D82EF0D009F21CB /* SYViewController.m */,
+				9692F1B11D82F3B4009F21CB /* SYViewController.xib */,
+				9692F1AD1D82F186009F21CB /* SYView.xib */,
 				9692F19D1D82EE77009F21CB /* Assets.xcassets */,
 				9692F19F1D82EE77009F21CB /* LaunchScreen.storyboard */,
 				9692F1A21D82EE77009F21CB /* Info.plist */,
@@ -137,7 +148,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9692F1AE1D82F186009F21CB /* SYView.xib in Resources */,
 				9692F1A11D82EE77009F21CB /* LaunchScreen.storyboard in Resources */,
+				9692F1B21D82F3B4009F21CB /* SYViewController.xib in Resources */,
 				9692F19E1D82EE77009F21CB /* Assets.xcassets in Resources */,
 				9692F19C1D82EE77009F21CB /* Main.storyboard in Resources */,
 			);
@@ -150,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9692F1AB1D82EF0D009F21CB /* SYViewController.m in Sources */,
 				9692F1991D82EE77009F21CB /* ViewController.m in Sources */,
 				9692F1961D82EE77009F21CB /* AppDelegate.m in Sources */,
 				9692F1931D82EE77009F21CB /* main.m in Sources */,
@@ -301,6 +315,7 @@
 				9692F1A71D82EE77009F21CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

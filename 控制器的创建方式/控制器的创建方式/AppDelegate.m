@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SYViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //创建窗口
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    //创建Storyboard
+    //UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    //获取箭头所指的控制器
+    //id vc = [mainStoryboard instantiateInitialViewController];
+    
+    //通过标识获取storyboard的控制器
+    //id vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"RedVc"];
+    
+    //直接创建控制器
+    //UIViewController *vc = [[UIViewController alloc] init];
+    //vc.view.backgroundColor = [UIColor greenColor];
+    
+    //使用xib方法创建控制器
+    //SYViewController *vc = [[SYViewController alloc] initWithNibName:@"SYViewController" bundle:nil];
+    
+    //不指定xib
+    SYViewController *vc = [[SYViewController alloc] init];
+    
+    //设置根控制器
+    window.rootViewController = vc;
+    
+    //设置主窗口并可见
+    [window makeKeyAndVisible];
+    self.window = window;
+    
     return YES;
 }
 
