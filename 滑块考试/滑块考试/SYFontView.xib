@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="irG-wn-k9m" customClass="SYFontView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="15" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="5aY-Kl-nOG">
+                    <rect key="frame" x="6" y="75" width="308" height="31"/>
+                    <connections>
+                        <action selector="sliderChanged:" destination="irG-wn-k9m" eventType="valueChanged" id="TyT-Ti-7pi"/>
+                    </connections>
+                </slider>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5Y-ac-mUM">
+                    <rect key="frame" x="8" y="25" width="50" height="35"/>
+                    <state key="normal" backgroundImage="正文字号-小（默认）"/>
+                    <state key="selected" backgroundImage="正文字号-小"/>
+                    <connections>
+                        <action selector="btnClicked:" destination="irG-wn-k9m" eventType="touchUpInside" id="7PE-je-eBz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txk-wA-1UZ">
+                    <rect key="frame" x="87" y="25" width="50" height="35"/>
+                    <state key="normal" backgroundImage="正文字号-中（默认）"/>
+                    <state key="selected" backgroundImage="正文字号-中"/>
+                    <connections>
+                        <action selector="btnClicked:" destination="irG-wn-k9m" eventType="touchUpInside" id="vf4-7q-Tu8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBt-za-W3U">
+                    <rect key="frame" x="178" y="25" width="50" height="35"/>
+                    <state key="normal" backgroundImage="正文字号-大（默认）"/>
+                    <state key="selected" backgroundImage="正文字号-大"/>
+                    <connections>
+                        <action selector="btnClicked:" destination="irG-wn-k9m" eventType="touchUpInside" id="9d3-0Z-fw1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdn-y1-wJQ">
+                    <rect key="frame" x="262" y="25" width="50" height="35"/>
+                    <state key="normal" backgroundImage="正文字号-大+（默认）"/>
+                    <state key="selected" backgroundImage="正文字号-大+"/>
+                    <connections>
+                        <action selector="btnClicked:" destination="irG-wn-k9m" eventType="touchUpInside" id="MHS-3W-Zwg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn1" destination="v5Y-ac-mUM" id="xgZ-2M-ucB"/>
+                <outlet property="btn2" destination="Txk-wA-1UZ" id="XWA-V2-igX"/>
+                <outlet property="btn3" destination="SBt-za-W3U" id="ha5-xO-qLo"/>
+                <outlet property="btn4" destination="Vdn-y1-wJQ" id="Npr-ZZ-2HW"/>
+                <outlet property="sliderView" destination="5aY-Kl-nOG" id="xEB-jp-yrQ"/>
+            </connections>
+            <point key="canvasLocation" x="336" y="402"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="正文字号-中" width="80" height="68"/>
+        <image name="正文字号-中（默认）" width="80" height="68"/>
+        <image name="正文字号-大" width="80" height="68"/>
+        <image name="正文字号-大+" width="80" height="68"/>
+        <image name="正文字号-大+（默认）" width="80" height="68"/>
+        <image name="正文字号-大（默认）" width="80" height="68"/>
+        <image name="正文字号-小" width="80" height="68"/>
+        <image name="正文字号-小（默认）" width="80" height="68"/>
+    </resources>
+</document>
