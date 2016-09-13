@@ -85,7 +85,11 @@
  *  键盘隐藏
  */
 - (void)willHide {
-    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.transform = CGAffineTransformIdentity;
+    }];
+    self.toolbar.preBtn.enabled = YES;
+    self.toolbar.nextBtn.enabled = YES;
 }
 
 /**
