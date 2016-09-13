@@ -64,8 +64,7 @@
     //当键盘弹出时判断按钮是否可用
     if (currentIndex == 0) {
         self.toolbar.preBtn.enabled = NO;
-    }
-    if (currentIndex == self.fields.count - 1) {
+    } else if (currentIndex == self.fields.count - 1) {
         self.toolbar.nextBtn.enabled = NO;
     }
     //获取当前的TextField
@@ -79,6 +78,7 @@
             self.view.transform = CGAffineTransformMakeTranslation(0, delta);
         }];
     }
+    NSLog(@"willshow");
 }
 
 /**
@@ -88,8 +88,10 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.view.transform = CGAffineTransformIdentity;
     }];
+    //当TextField变换焦点的时候,键盘也一直不断的显示和隐藏,这里设置了按钮的可用状态,下面就不需要单独设置了
     self.toolbar.preBtn.enabled = YES;
     self.toolbar.nextBtn.enabled = YES;
+    NSLog(@"willhide");
 }
 
 /**
@@ -133,7 +135,6 @@
  */
 - (void)next {
     NSInteger currentIndex = [self indexOfFirstResponder];
-    self.toolbar.preBtn.enabled = YES;
     //当前index所对应的TextField不当响应者
     [self.fields[currentIndex] resignFirstResponder];
     if (currentIndex != -1 && currentIndex != self.fields.count - 1) {
@@ -147,7 +148,6 @@
  */
 - (void)previous {
     NSInteger currentIndex = [self indexOfFirstResponder];
-    self.toolbar.nextBtn.enabled = YES;
     [self.fields[currentIndex] resignFirstResponder];
     if (currentIndex != -1 && currentIndex != 0) {
         NSInteger preIndex = currentIndex - 1;
