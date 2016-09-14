@@ -9,9 +9,10 @@
 #import "SYContactsViewController.h"
 #import "SYContact.h"
 #import "SYAddContactViewController.h"
+#import "SYEditContactViewController.h"
 
-@interface SYContactsViewController () <SYAddContactViewControllerDelegate>
-
+@interface SYContactsViewController () <SYAddContactViewControllerDelegate,SYEditContactViewControllerDelegate>
+/**存有联系人模型的数组*/
 @property (nonatomic, strong) NSMutableArray *contacts;
 
 @end
@@ -53,10 +54,18 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //获取跳转目标
     id destVc = segue.destinationViewController;
+    //判断目标输入哪个controller
     if ([destVc isKindOfClass:[SYAddContactViewController class]]) {
         SYAddContactViewController *addContactVc = destVc;
         addContactVc.delegate = self;
+    } else if ([destVc isKindOfClass:[SYEditContactViewController class]]) {
+        SYEditContactViewController *editContactVc = destVc;
+        NSInteger row = self.tableView.indexPathForSelectedRow.row;
+        SYContact *contact = self.contacts[row];
+        editContactVc.contact = contact;
+        editContactVc.delegate = self;
     }
 }
 
@@ -67,6 +76,14 @@
     NSIndexPath *lastpath = [NSIndexPath indexPathForRow:self.contacts.count - 1 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[lastpath] withRowAnimation:UITableViewRowAnimationFade];
     //添加完毕后隐藏添加页面
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - SYEditContactViewController 代理方法
+- (void)SYEditContactViewController:(SYEditContactViewController *)editContactVc didFinishedSaveContact:(SYContact *)contact {
+    NSInteger row = [self.contacts indexOfObject:contact];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

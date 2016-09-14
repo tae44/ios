@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96D729941D897326009DC793 /* SYEditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D729931D897326009DC793 /* SYEditContactViewController.m */; };
 		9DD583111D879BEA00A8FAC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD583101D879BEA00A8FAC4 /* main.m */; };
 		9DD583141D879BEA00A8FAC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD583131D879BEA00A8FAC4 /* AppDelegate.m */; };
 		9DD5831A1D879BEA00A8FAC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD583181D879BEA00A8FAC4 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96D729921D897326009DC793 /* SYEditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYEditContactViewController.h; sourceTree = "<group>"; };
+		96D729931D897326009DC793 /* SYEditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYEditContactViewController.m; sourceTree = "<group>"; };
 		9DD5830C1D879BEA00A8FAC4 /* 通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD583101D879BEA00A8FAC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DD583121D879BEA00A8FAC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				9DD5832F1D879EFB00A8FAC4 /* SYContactsViewController.m */,
 				9DD9898F1D88EF8A00DD053D /* SYAddContactViewController.h */,
 				9DD989901D88EF8A00DD053D /* SYAddContactViewController.m */,
+				96D729921D897326009DC793 /* SYEditContactViewController.h */,
+				96D729931D897326009DC793 /* SYEditContactViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				9DD583141D879BEA00A8FAC4 /* AppDelegate.m in Sources */,
 				9DD9898E1D88EA3600DD053D /* SYContact.m in Sources */,
 				9DD9898B1D88DAD700DD053D /* MBProgressHUD.m in Sources */,
+				96D729941D897326009DC793 /* SYEditContactViewController.m in Sources */,
 				9DD583111D879BEA00A8FAC4 /* main.m in Sources */,
 				9DD583301D879EFB00A8FAC4 /* SYContactsViewController.m in Sources */,
 			);
