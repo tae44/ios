@@ -42,15 +42,42 @@
     self.loginBtn.enabled = (self.accountField.text.length != 0 && self.passwordField.text.length != 0);
 }
 
+/**
+ *  第三方框架的演示代码,制作提示框效果
+ */
+- (void)customViewExample {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    
+    // Set the custom view mode to show any view.
+    hud.mode = MBProgressHUDModeCustomView;
+    // Set an image view with a checkmark.
+    UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    hud.customView = [[UIImageView alloc] initWithImage:image];
+    // Looks a bit nicer if we make it square.
+    hud.square = YES;
+    // Optional label text.
+    hud.label.text = NSLocalizedString(@"用户名或密码错误", @"HUD done title");
+    
+    [hud hideAnimated:YES afterDelay:1.5];
+}
+
 - (IBAction)loginBtnClick {
     NSString *account = self.accountField.text;
     NSString *password = self.passwordField.text;
     if ([account isEqualToString:@"zhangsan"] && [password isEqualToString:@"123"]) {
-        NSLog(@"账号与密码正确");
-        //执行一个segue，就会进入segue所指的控制器,提前设置segue的ID值
-        [self performSegueWithIdentifier:@"toContactsSegue" sender:nil];
+        //使用第三方框架制作提示框效果
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        hud.label.text = NSLocalizedString(@"登录中...", @"HUD loading title");
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+            sleep(1.5);
+            //执行一个segue，就会进入segue所指的控制器,提前设置segue的ID值
+            [self performSegueWithIdentifier:@"toContactsSegue" sender:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [hud hideAnimated:YES];
+            });
+        });
     } else {
-        NSLog(@"账号或密码不正确");
+        [self customViewExample];
     }
 }
 
