@@ -14,6 +14,9 @@
 		9DD5831F1D879BEA00A8FAC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD5831D1D879BEA00A8FAC4 /* LaunchScreen.storyboard */; };
 		9DD5832D1D879EDA00A8FAC4 /* SYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD5832C1D879EDA00A8FAC4 /* SYLoginViewController.m */; };
 		9DD583301D879EFB00A8FAC4 /* SYContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD5832F1D879EFB00A8FAC4 /* SYContactsViewController.m */; };
+		9DD9898B1D88DAD700DD053D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9898A1D88DAD700DD053D /* MBProgressHUD.m */; };
+		9DD9898E1D88EA3600DD053D /* SYContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9898D1D88EA3600DD053D /* SYContact.m */; };
+		9DD989911D88EF8A00DD053D /* SYAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD989901D88EF8A00DD053D /* SYAddContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		9DD5832C1D879EDA00A8FAC4 /* SYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLoginViewController.m; sourceTree = "<group>"; };
 		9DD5832E1D879EFB00A8FAC4 /* SYContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYContactsViewController.h; sourceTree = "<group>"; };
 		9DD5832F1D879EFB00A8FAC4 /* SYContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYContactsViewController.m; sourceTree = "<group>"; };
+		9DD989891D88DAD700DD053D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		9DD9898A1D88DAD700DD053D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9DD9898C1D88EA3600DD053D /* SYContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYContact.h; sourceTree = "<group>"; };
+		9DD9898D1D88EA3600DD053D /* SYContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYContact.m; sourceTree = "<group>"; };
+		9DD9898F1D88EF8A00DD053D /* SYAddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAddContactViewController.h; sourceTree = "<group>"; };
+		9DD989901D88EF8A00DD053D /* SYAddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAddContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 		9DD583261D879C0100A8FAC4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9DD989881D88DABE00DD053D /* MBProgressHUD */,
 				9DD5832A1D879C1700A8FAC4 /* Other */,
 				9DD583291D879C1100A8FAC4 /* Controller */,
 				9DD583281D879C0D00A8FAC4 /* View */,
@@ -91,6 +101,8 @@
 		9DD583271D879C0600A8FAC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9DD9898C1D88EA3600DD053D /* SYContact.h */,
+				9DD9898D1D88EA3600DD053D /* SYContact.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -111,6 +123,8 @@
 				9DD5832C1D879EDA00A8FAC4 /* SYLoginViewController.m */,
 				9DD5832E1D879EFB00A8FAC4 /* SYContactsViewController.h */,
 				9DD5832F1D879EFB00A8FAC4 /* SYContactsViewController.m */,
+				9DD9898F1D88EF8A00DD053D /* SYAddContactViewController.h */,
+				9DD989901D88EF8A00DD053D /* SYAddContactViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -122,6 +136,15 @@
 				9DD583131D879BEA00A8FAC4 /* AppDelegate.m */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		9DD989881D88DABE00DD053D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9DD989891D88DAD700DD053D /* MBProgressHUD.h */,
+				9DD9898A1D88DAD700DD053D /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DD5832D1D879EDA00A8FAC4 /* SYLoginViewController.m in Sources */,
+				9DD989911D88EF8A00DD053D /* SYAddContactViewController.m in Sources */,
 				9DD583141D879BEA00A8FAC4 /* AppDelegate.m in Sources */,
+				9DD9898E1D88EA3600DD053D /* SYContact.m in Sources */,
+				9DD9898B1D88DAD700DD053D /* MBProgressHUD.m in Sources */,
 				9DD583111D879BEA00A8FAC4 /* main.m in Sources */,
 				9DD583301D879EFB00A8FAC4 /* SYContactsViewController.m in Sources */,
 			);
@@ -346,6 +372,7 @@
 				9DD583251D879BEA00A8FAC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

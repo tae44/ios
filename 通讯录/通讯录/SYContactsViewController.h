@@ -10,4 +10,6 @@
 
 @interface SYContactsViewController : UITableViewController
 
+@property (nonatomic , copy) NSString *name;
+
 @end
