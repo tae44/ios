@@ -10,6 +10,12 @@
 #import "SYContactsViewController.h"
 #import "MBProgressHUD.h"
 
+//定义一些常用变量,使用更加方便且不会出错
+#define rememberPwdKey @"rememberPwd"
+#define autoLoginKey @"autoLogin"
+#define ACCOUNT @"zhangsan"
+#define PASSWORD @"123"
+
 @interface SYLoginViewController ()
 /**账号输入框*/
 @property (weak, nonatomic) IBOutlet UITextField *accountField;
@@ -17,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 /**登陆按钮*/
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+/**存储用户偏好设置的对象*/
+@property (nonatomic, strong) NSUserDefaults *defaults;
 
 - (IBAction)loginBtnClick;
 /**记住密码的开关*/
@@ -28,11 +36,31 @@
 
 @implementation SYLoginViewController
 
+- (NSUserDefaults *)defaults {
+    if (!_defaults) {
+        _defaults = [NSUserDefaults standardUserDefaults];
+    }
+    return _defaults;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    连线解决,输入变动的时候调用方法
 //    [self.accountField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
 //    [self.passwordField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
+    //加载完成时读取用户偏好设置
+    self.rememberPwdSwitch.on = [self.defaults boolForKey:rememberPwdKey];
+    self.autoLoginSwitch.on = [self.defaults boolForKey:autoLoginKey];
+    self.accountField.text = [self.defaults objectForKey:ACCOUNT];
+    //只有记住密码开关为开时才自动输入密码
+    if (self.rememberPwdSwitch.isOn) {
+        self.passwordField.text = [self.defaults objectForKey:PASSWORD];
+    }
+    [self textChange];
+    //自动登录开关为开时自动调用登录
+    if (self.autoLoginSwitch.isOn) {
+        [self performSelector:@selector(loginBtnClick) withObject:nil afterDelay:1.0];
+    }
 }
 
 /**
@@ -61,6 +89,9 @@
     [hud hideAnimated:YES afterDelay:1.5];
 }
 
+/**
+ 点击登录按钮
+ */
 - (IBAction)loginBtnClick {
     NSString *account = self.accountField.text;
     NSString *password = self.passwordField.text;
@@ -76,9 +107,23 @@
                 [hud hideAnimated:YES];
             });
         });
+        //如果记住密码开关开启,则存储密码到沙盒,用户名一直都会存储
+        if (self.rememberPwdSwitch.isOn) {
+            [self.defaults setObject:self.passwordField.text forKey:PASSWORD];
+        }
+        [self.defaults setObject:self.accountField.text forKey:ACCOUNT];
     } else {
         [self customViewExample];
     }
+}
+
+/**
+ 保存用户偏好设置
+ */
+- (void)saveUserPreference {
+    [self.defaults setBool:self.rememberPwdSwitch.isOn forKey:rememberPwdKey];
+    [self.defaults setBool:self.autoLoginSwitch.isOn forKey:autoLoginKey];
+    [self.defaults synchronize];
 }
 
 /**
@@ -89,6 +134,7 @@
     if (self.rememberPwdSwitch.isOn == NO && self.autoLoginSwitch.isOn == YES) {
         [self.autoLoginSwitch setOn:NO animated:YES];
     }
+    [self saveUserPreference];
 }
 
 /**
@@ -99,6 +145,7 @@
     if (self.autoLoginSwitch.isOn == YES && self.rememberPwdSwitch.isOn == NO) {
         [self.rememberPwdSwitch setOn:YES animated:YES];
     }
+    [self saveUserPreference];
 }
 
 /**

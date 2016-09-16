@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SYContact : NSObject
+@interface SYContact : NSObject <NSCoding>
 
 @property (nonatomic , copy) NSString *name;
 

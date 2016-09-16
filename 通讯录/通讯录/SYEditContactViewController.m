@@ -27,6 +27,9 @@
     self.telField.text = self.contact.tel;
 }
 
+/**
+ 点击编辑按钮时调用
+ */
 - (IBAction)editBtnClick:(UIBarButtonItem *)sender {
     self.nameField.enabled = !self.nameField.enabled;
     self.telField.enabled = !self.telField.enabled;
@@ -38,6 +41,9 @@
     }
 }
 
+/**
+ 点击保存按钮时调用
+ */
 - (IBAction)saveContactBtnClick {
     if ([self.delegate respondsToSelector:@selector(SYEditContactViewController:didFinishedSaveContact:)]) {
         self.contact.name = self.nameField.text;
