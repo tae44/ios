@@ -17,14 +17,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    //创建窗口
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
+    //创建tabbar控制器
     UITabBarController *tabbar = [[UITabBarController alloc] init];
     
     UIViewController *vc1 = [[UIViewController alloc] init];
     vc1.view.backgroundColor = [UIColor redColor];
+    //设置UITabbarButton的标题
     vc1.tabBarItem.title = @"联系人";
+    //设置图片
+    //vc1.tabBarItem.image = [UIImage imageNamed:@"tab_buddy_nor"];
+    //设置提示的数字
+    //vc1.tabBarItem.badgeValue = @"";
+    //添加为UITabBarController的子控制器
     //[tabbar addChildViewController:vc1];
     
     UIViewController *vc2 = [[UIViewController alloc] init];
@@ -32,7 +38,9 @@
     vc2.tabBarItem.title = @"动态";
     //[tabbar addChildViewController:vc2];
     
-    [tabbar setViewControllers:@[vc1,vc2]];
+    //一次性添加子控制器
+    tabbar.viewControllers = @[vc1,vc2];
+    //[tabbar setViewControllers:@[vc1,vc2]];
     window.rootViewController = tabbar;
     [window makeKeyAndVisible];
     self.window = window;
