@@ -55,6 +55,7 @@
         NSArray *line = self.allLines[i];
         for (NSInteger j = 0; j < line.count; j++) {
             CGPoint point = [line[j] CGPointValue];
+            [self.color set];
             //j为0表示为一条线的起点
             if (j == 0) {
                 CGContextMoveToPoint(context, point.x, point.y);
@@ -62,9 +63,8 @@
                 CGContextAddLineToPoint(context, point.x, point.x);
             }
         }
+        CGContextStrokePath(context);
     }
-    [self.color set];
-    CGContextStrokePath(context);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
