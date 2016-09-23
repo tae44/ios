@@ -33,7 +33,7 @@
         btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
         [btn setImage:[UIImage imageNamed:@"gesture_node_normal"] forState:UIControlStateNormal];
     }
-    NSLog(@"%ld", self.subviews.count);
+    NSLog(@"%ld", self.subviews.count);//9
 }
 
 @end
