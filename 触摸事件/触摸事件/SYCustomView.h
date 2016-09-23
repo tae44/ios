@@ -1,0 +1,13 @@
+//
+//  SYCustomView.h
+//  触摸事件
+//
+//  Created by jason on 2016/9/23.
+//  Copyright © 2016年 jason. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface SYCustomView : UIView
+
+@end
