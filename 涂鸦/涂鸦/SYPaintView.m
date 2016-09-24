@@ -15,6 +15,11 @@
  */
 @property (nonatomic, strong) NSMutableArray *allLines;
 
+/**
+ 所有线的颜色,每一条对应里面一个元素
+ */
+@property (nonatomic, strong) NSMutableArray *colorsOfAllLine;
+
 @end
 
 @implementation SYPaintView
@@ -26,14 +31,11 @@
     return _allLines;
 }
 
-/**
- 懒加载颜色属性,如果颜色没有设置,默认为黑色
- */
-- (UIColor *)color {
-    if (!_color) {
-        _color = [UIColor blackColor];
+- (NSMutableArray *)colorsOfAllLine {
+    if (!_colorsOfAllLine) {
+        _colorsOfAllLine = [NSMutableArray array];
     }
-    return _color;
+    return _colorsOfAllLine;
 }
 
 /**
@@ -53,14 +55,16 @@
     CGContextSetLineWidth(context, self.width);
     for (NSInteger i = 0; i < count; i++) {
         NSArray *line = self.allLines[i];
+        //设置颜色
+        UIColor *lineColor = self.colorsOfAllLine[i];
+        [lineColor set];
         for (NSInteger j = 0; j < line.count; j++) {
             CGPoint point = [line[j] CGPointValue];
-            [self.color set];
             //j为0表示为一条线的起点
             if (j == 0) {
                 CGContextMoveToPoint(context, point.x, point.y);
             } else {
-                CGContextAddLineToPoint(context, point.x, point.x);
+                CGContextAddLineToPoint(context, point.x, point.y);
             }
         }
         CGContextStrokePath(context);
@@ -71,6 +75,12 @@
     //创建一条线的数组
     NSMutableArray *line = [NSMutableArray array];
     [self.allLines addObject:line];
+    //保存当前线的颜色
+    if (!self.currentColor) {
+        [self.colorsOfAllLine addObject:[UIColor blackColor]];
+    } else {
+        [self.colorsOfAllLine addObject:self.currentColor];
+    }
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -90,6 +100,7 @@
  */
 - (void)back {
     [self.allLines removeLastObject];
+    [self.colorsOfAllLine removeLastObject];
     [self setNeedsDisplay];
 }
 
@@ -98,6 +109,7 @@
  */
 - (void)clean {
     [self.allLines removeAllObjects];
+    [self.colorsOfAllLine removeAllObjects];
     [self setNeedsDisplay];
 }
 

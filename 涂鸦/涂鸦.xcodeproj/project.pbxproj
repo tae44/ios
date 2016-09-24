@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966BE2131D961A0500EBDCCB /* UIImage+SY.m in Sources */ = {isa = PBXBuildFile; fileRef = 966BE2121D961A0500EBDCCB /* UIImage+SY.m */; };
 		9D397DBE1D94BCA400259CCB /* SYPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D397DBD1D94BCA400259CCB /* SYPaintView.m */; };
 		9DEB9B591D94BBB70019778D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB9B581D94BBB70019778D /* main.m */; };
 		9DEB9B5C1D94BBB70019778D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB9B5B1D94BBB70019778D /* AppDelegate.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		966BE2111D961A0500EBDCCB /* UIImage+SY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SY.h"; sourceTree = "<group>"; };
+		966BE2121D961A0500EBDCCB /* UIImage+SY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SY.m"; sourceTree = "<group>"; };
 		9D397DBC1D94BCA400259CCB /* SYPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPaintView.h; sourceTree = "<group>"; };
 		9D397DBD1D94BCA400259CCB /* SYPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPaintView.m; sourceTree = "<group>"; };
 		9DEB9B541D94BBB70019778D /* 涂鸦.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "涂鸦.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +64,8 @@
 		9DEB9B561D94BBB70019778D /* 涂鸦 */ = {
 			isa = PBXGroup;
 			children = (
+				966BE2111D961A0500EBDCCB /* UIImage+SY.h */,
+				966BE2121D961A0500EBDCCB /* UIImage+SY.m */,
 				9DEB9B5A1D94BBB70019778D /* AppDelegate.h */,
 				9DEB9B5B1D94BBB70019778D /* AppDelegate.m */,
 				9DEB9B5D1D94BBB70019778D /* ViewController.h */,
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEB9B5F1D94BBB70019778D /* ViewController.m in Sources */,
+				966BE2131D961A0500EBDCCB /* UIImage+SY.m in Sources */,
 				9DEB9B5C1D94BBB70019778D /* AppDelegate.m in Sources */,
 				9DEB9B591D94BBB70019778D /* main.m in Sources */,
 				9D397DBE1D94BCA400259CCB /* SYPaintView.m in Sources */,

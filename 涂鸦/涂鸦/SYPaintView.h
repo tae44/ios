@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SYPaintView : UIView
-/**画出来的颜色*/
-@property (nonatomic, strong) UIColor *color;
+/**当前选中的颜色*/
+@property (nonatomic, strong) UIColor *currentColor;
 /**线宽*/
 @property (nonatomic ,assign) CGFloat width;
 

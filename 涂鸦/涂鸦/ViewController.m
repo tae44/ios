@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SYPaintView.h"
+#import "UIImage+SY.h"
 
 @interface ViewController ()
 
@@ -39,16 +40,16 @@
  点击保存按钮
  */
 - (IBAction)save {
-    
+    UIImage *captureImg = [UIImage captureImage:self.paintView];
+    NSData *imgData = UIImagePNGRepresentation(captureImg);
+    [imgData writeToFile:@"/Users/jason/Desktop/capture.png" atomically:YES];
 }
 
 /**
  点击颜色按钮
-
- @param sender 按钮本身
  */
 - (IBAction)coclorBtnClick:(UIButton *)sender {
-    self.paintView.color = sender.backgroundColor;
+    self.paintView.currentColor = sender.backgroundColor;
 }
 
 /**
@@ -58,6 +59,5 @@
     self.paintView.width = sender.value;
     [self.paintView changeLineWidth];
 }
-
 
 @end
