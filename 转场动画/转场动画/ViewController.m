@@ -124,4 +124,41 @@
     [self.imageView.layer addAnimation:animation forKey:nil];
 }
 
+/**
+ UIView的转场动画
+ */
+-(void)test3{
+    //    UIViewAnimationOptionTransitionFlipFromLeft
+    //    UIViewAnimationOptionTransitionFlipFromRight
+    //    UIViewAnimationOptionTransitionCurlUp
+    //    UIViewAnimationOptionTransitionCurlDown
+    //    UIViewAnimationOptionTransitionCrossDissolve
+    //    UIViewAnimationOptionTransitionFlipFromTop
+    //    UIViewAnimationOptionTransitionFlipFromBottom
+    [UIView transitionWithView:self.imageView duration:3 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        self.imageView.image = [UIImage imageNamed:@"2.jpg"];
+    } completion:^(BOOL finished) {
+        NSLog(@"动画执行完成");
+    }];
+}
+
+/**
+ UIView动画
+ */
+-(void)test1{
+    [UIView beginAnimations:nil context:nil];
+    //设置时间
+    [UIView setAnimationDuration:3];
+    //监听动画的完成
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(stop)];
+    //实现动画代码
+    self.imageView.center = CGPointMake(200, 280);
+    [UIView commitAnimations];
+}
+
+-(void)stop{
+    NSLog(@"%s",__func__);
+}
+
 @end
