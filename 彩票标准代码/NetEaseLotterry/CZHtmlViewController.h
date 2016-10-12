@@ -1,0 +1,14 @@
+//
+//  CZHtmlViewController.h
+//  NetEaseLotterry
+//
+//  Created by Vincent_Guo on 14-9-4.
+//  Copyright (c) 2014年 vgios. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+@class CZHtmlPage;
+
+@interface CZHtmlViewController : UIViewController
+@property(nonatomic,strong)CZHtmlPage *htmlPage;
+@end

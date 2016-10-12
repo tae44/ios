@@ -1,0 +1,42 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "MBProgressHUD+Extend.h"
+
+//系统版本判断
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] > 7.0)
+
+/**
+ *  定义自己日志输出(可以显示类名 方法名 行数)
+ */
+#define classmethod [NSString stringWithFormat:@"%s %d 行 \n",__func__,__LINE__]
+
+
+
+#if DEBUG
+//#define CZLog(...) NSLog(__VA_ARGS__)
+#define CZLog(...) NSLog(@"%@ %@\n\n",classmethod,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define CZLog(...)
+#endif
+
+#define CZBgColor [UIColor colorWithRed:239/255.0 green:236/255.0 blue:235/255.0 alpha:1]
+
+#define CZColor(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+
+//是否为4英寸
+#define is4Inch ([UIScreen mainScreen].bounds.size.height == 568.0)
+#endif
