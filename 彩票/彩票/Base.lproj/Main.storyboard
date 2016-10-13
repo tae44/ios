@@ -53,7 +53,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Kfp-wJ-jXC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qPG-h5-DC9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -95,7 +95,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qce-aq-6Cz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IhL-aB-Z0G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -131,7 +131,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rqY-Dc-2Qt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="atj-aK-gJ4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -167,14 +167,14 @@
                         <viewControllerLayoutGuide type="bottom" id="ivC-Ff-q8K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RGA-hA-L2i">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="购彩大厅" id="uFO-TZ-kOV">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="P9l-P0-tiV">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WBf-df-YnK">
-                                <rect key="frame" x="344" y="11" width="50" height="22"/>
+                                <rect key="frame" x="309" y="11" width="50" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -199,7 +199,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1lp-lc-DsF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AQk-Hc-I9Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -234,14 +234,14 @@
                         <viewControllerLayoutGuide type="bottom" id="MUn-6z-Vmg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b9c-EC-ok3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="L81-JZ-KZH">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gYG-US-aJ5" customClass="SYTitleButton">
-                            <rect key="frame" x="162" y="11" width="90" height="22"/>
+                            <rect key="frame" x="143" y="11" width="90" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="全部彩种" image="YellowDownArrow"/>
