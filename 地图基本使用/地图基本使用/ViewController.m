@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
+//#import <CoreLocation/CoreLocation.h>
+#import "SYAnnotation.h"
+#import "SYAnnotationView.h"
 
 @interface ViewController () <MKMapViewDelegate>
 
@@ -46,6 +48,43 @@
     [btn setImage:[UIImage imageNamed:@"btn_map_locate"] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"btn_map_locate_hl"] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(backToCenter) forControlEvents:UIControlEventTouchUpInside];
+    // 添加增加大头针按钮
+    UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(300, 620, 80, 30)];
+    [self.view addSubview:addBtn];
+    [addBtn setTitle:@"添加大头针" forState:UIControlStateNormal];
+    [addBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    addBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [addBtn addTarget:self action:@selector(addAnnotation) forControlEvents:UIControlEventTouchUpInside];
+}
+
+/**
+ 在地图上添加一个大头针就会执行该方法
+
+ @param annotation 大头针模型对象
+
+ @return 大头针的View(返回nil表示默认使用系统,默认MKAnnotationView是不可见)
+ */
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    // 如果是用户位置的大头针,直接返回nil,使用系统的
+    if ([annotation isKindOfClass:[MKUserLocation class]]) return nil;
+    // 添加自己的大头针view
+    SYAnnotationView *annoView = [SYAnnotationView SYAnnoViewWithMapView:mapView];
+    return annoView;
+}
+
+- (void)addAnnotation {
+    // 添加两个大头针
+    SYAnnotation *anno1 = [[SYAnnotation alloc] init];
+    anno1.coordinate = CLLocationCoordinate2DMake(40.06, 116.39);
+    anno1.title = @"北京市";
+    anno1.subtitle = @"中国北京市昌平区";
+    anno1.icon = @"category_1";
+    SYAnnotation *anno2 = [[SYAnnotation alloc] init];
+    anno2.coordinate = CLLocationCoordinate2DMake(30.23, 120.23);
+    anno2.title = @"杭州市";
+    anno2.subtitle = @"浙江省杭州市萧山区";
+    anno2.icon = @"category_2";
+    [self.mapView addAnnotations:@[anno1, anno2]];
 }
 
 /**
@@ -56,6 +95,26 @@
     // MKCoordinateRegion region = MKCoordinateRegionMake(self.mapView.userLocation.location.coordinate, span);
     // [self.mapView setRegion:region animated:YES];
     [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+}
+
+/**
+ 大头针的View已经被添加mapView会执行该方法
+
+ @param views   所有大头针的View都存放在该数组中
+ */
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
+    for (MKAnnotationView *annoView in views) {
+        // 如果是系统的大头针直接返回
+        if ([annoView isKindOfClass:[MKUserLocation class]]) return;
+        // 取出大头针view最终位置
+        CGRect endFrame = annoView.frame;
+        // 重新设置位置
+        annoView.frame = CGRectMake(endFrame.origin.x, 0, endFrame.size.width, endFrame.size.height);
+        // 执行动画
+        [UIView animateWithDuration:0.5 animations:^{
+            annoView.frame = endFrame;
+        }];
+    }
 }
 
 /**
@@ -89,13 +148,29 @@
     }];
 }
 
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{
-    MKCoordinateRegion region = mapView.region;
-    CLLocationCoordinate2D center = region.center;
-    MKCoordinateSpan span = region.span;
-    NSLog(@"纬度:%f 经度:%f", center.latitude, center.longitude);
-    NSLog(@"纬度跨度:%f 经度跨度:%f", span.latitudeDelta, span.longitudeDelta);
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    // 获取用户点击的点
+//    CGPoint point = [[touches anyObject] locationInView:self.view];
+//    // 将点转化为经纬度
+//    CLLocationCoordinate2D coordinate = [self.mapView convertPoint:point toCoordinateFromView:self.view];
+//    // 添加大头针
+//    SYAnnotation *anno = [[SYAnnotation alloc] init];
+//    anno.coordinate = coordinate;
+//    anno.title = @"姜式餐饮";
+//    anno.subtitle = @"姜式餐饮是中国最好的餐饮集团";
+//    [self.mapView addAnnotation:anno];
+//}
+
+/**
+ 地图放大或缩小后调用
+ */
+//- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+//{
+//    MKCoordinateRegion region = mapView.region;
+//    CLLocationCoordinate2D center = region.center;
+//    MKCoordinateSpan span = region.span;
+//    NSLog(@"纬度:%f 经度:%f", center.latitude, center.longitude);
+//    NSLog(@"纬度跨度:%f 经度跨度:%f", span.latitudeDelta, span.longitudeDelta);
+//}
 
 @end

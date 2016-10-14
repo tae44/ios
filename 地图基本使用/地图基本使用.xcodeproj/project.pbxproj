@@ -13,6 +13,8 @@
 		967DDC221DAF6CE100600506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967DDC201DAF6CE100600506 /* Main.storyboard */; };
 		967DDC241DAF6CE100600506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967DDC231DAF6CE100600506 /* Assets.xcassets */; };
 		967DDC271DAF6CE100600506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967DDC251DAF6CE100600506 /* LaunchScreen.storyboard */; };
+		96E4FFCE1DB0E97300FA8E79 /* SYAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E4FFCD1DB0E97300FA8E79 /* SYAnnotation.m */; };
+		96E4FFD11DB0F3B700FA8E79 /* SYAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E4FFD01DB0F3B700FA8E79 /* SYAnnotationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		967DDC231DAF6CE100600506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967DDC261DAF6CE100600506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		967DDC281DAF6CE100600506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96E4FFCC1DB0E97300FA8E79 /* SYAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAnnotation.h; sourceTree = "<group>"; };
+		96E4FFCD1DB0E97300FA8E79 /* SYAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAnnotation.m; sourceTree = "<group>"; };
+		96E4FFCF1DB0F3B700FA8E79 /* SYAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAnnotationView.h; sourceTree = "<group>"; };
+		96E4FFD01DB0F3B700FA8E79 /* SYAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAnnotationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				967DDC1B1DAF6CE100600506 /* AppDelegate.m */,
 				967DDC1D1DAF6CE100600506 /* ViewController.h */,
 				967DDC1E1DAF6CE100600506 /* ViewController.m */,
+				96E4FFCC1DB0E97300FA8E79 /* SYAnnotation.h */,
+				96E4FFCD1DB0E97300FA8E79 /* SYAnnotation.m */,
+				96E4FFCF1DB0F3B700FA8E79 /* SYAnnotationView.h */,
+				96E4FFD01DB0F3B700FA8E79 /* SYAnnotationView.m */,
 				967DDC201DAF6CE100600506 /* Main.storyboard */,
 				967DDC251DAF6CE100600506 /* LaunchScreen.storyboard */,
 				967DDC171DAF6CE100600506 /* Supporting Files */,
@@ -150,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E4FFD11DB0F3B700FA8E79 /* SYAnnotationView.m in Sources */,
+				96E4FFCE1DB0E97300FA8E79 /* SYAnnotation.m in Sources */,
 				967DDC1F1DAF6CE100600506 /* ViewController.m in Sources */,
 				967DDC1C1DAF6CE100600506 /* AppDelegate.m in Sources */,
 				967DDC191DAF6CE100600506 /* main.m in Sources */,
