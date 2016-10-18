@@ -39,7 +39,7 @@
     BMKNearbySearchOption *option = [[BMKNearbySearchOption alloc] init];
     option.pageIndex = 0;
     option.pageCapacity = 10;
-    option.location = CLLocationCoordinate2DMake(39.915, 116.404);
+    option.location = CLLocationCoordinate2DMake(39.925, 116.414);
     option.keyword = @"酒店";
     // 调用BMKPoiSearch的poiSearchNearBy
     BOOL flag = [_poiSearch poiSearchNearBy:option];
