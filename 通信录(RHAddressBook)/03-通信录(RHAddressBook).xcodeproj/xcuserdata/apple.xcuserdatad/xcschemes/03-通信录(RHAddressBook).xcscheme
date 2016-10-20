@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0610"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "18B152A71A8078E70075DAC1"
+               BuildableName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).app"
+               BlueprintName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)"
+               ReferencedContainer = "container:03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "18B152C01A8078E80075DAC1"
+               BuildableName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)Tests.xctest"
+               BlueprintName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)Tests"
+               ReferencedContainer = "container:03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "18B152C01A8078E80075DAC1"
+               BuildableName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)Tests.xctest"
+               BlueprintName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)Tests"
+               ReferencedContainer = "container:03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "18B152A71A8078E70075DAC1"
+            BuildableName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).app"
+            BlueprintName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)"
+            ReferencedContainer = "container:03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "18B152A71A8078E70075DAC1"
+            BuildableName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).app"
+            BlueprintName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)"
+            ReferencedContainer = "container:03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "18B152A71A8078E70075DAC1"
+            BuildableName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).app"
+            BlueprintName = "03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook)"
+            ReferencedContainer = "container:03-&#x901a;&#x4fe1;&#x5f55;(RHAddressBook).xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
