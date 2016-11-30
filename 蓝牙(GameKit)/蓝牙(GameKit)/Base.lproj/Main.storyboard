@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-au-ocT">
+                                <rect key="frame" x="67" y="38" width="240" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2ZD-b7-Iy0"/>
+                                    <constraint firstAttribute="height" constant="235" id="jfY-G5-HfK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae6-gT-v0Q">
+                                <rect key="frame" x="67" y="318" width="64" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="YsE-Dk-c7F"/>
+                                    <constraint firstAttribute="height" constant="30" id="qdt-UJ-mkg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="连接设备"/>
+                                <connections>
+                                    <action selector="connectDevice" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eE-dh-Sm6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPL-si-dp4">
+                                <rect key="frame" x="155" y="318" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="选择照片"/>
+                                <connections>
+                                    <action selector="chooseImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="pKp-OO-GPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s91-Nl-aNo">
+                                <rect key="frame" x="243" y="318" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="发送照片"/>
+                                <connections>
+                                    <action selector="sendImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="zKb-VH-XbR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W9i-au-ocT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="IFZ-m2-HST"/>
+                            <constraint firstItem="s91-Nl-aNo" firstAttribute="centerX" secondItem="XPL-si-dp4" secondAttribute="centerX" constant="88" id="SHf-ZG-V0a"/>
+                            <constraint firstItem="s91-Nl-aNo" firstAttribute="height" secondItem="Ae6-gT-v0Q" secondAttribute="height" id="YJB-h7-8F1"/>
+                            <constraint firstItem="XPL-si-dp4" firstAttribute="height" secondItem="Ae6-gT-v0Q" secondAttribute="height" id="eiw-W8-7hW"/>
+                            <constraint firstItem="W9i-au-ocT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="f0R-ck-P9d"/>
+                            <constraint firstItem="XPL-si-dp4" firstAttribute="width" secondItem="Ae6-gT-v0Q" secondAttribute="width" id="fXu-ih-fBt"/>
+                            <constraint firstItem="Ae6-gT-v0Q" firstAttribute="leading" secondItem="W9i-au-ocT" secondAttribute="leading" id="fdz-0I-Diq"/>
+                            <constraint firstItem="Ae6-gT-v0Q" firstAttribute="top" secondItem="W9i-au-ocT" secondAttribute="bottom" constant="45" id="mb2-mW-PTH"/>
+                            <constraint firstItem="s91-Nl-aNo" firstAttribute="top" secondItem="XPL-si-dp4" secondAttribute="top" id="qck-ZH-xL4"/>
+                            <constraint firstItem="s91-Nl-aNo" firstAttribute="width" secondItem="Ae6-gT-v0Q" secondAttribute="width" id="qfi-Dq-oDx"/>
+                            <constraint firstItem="XPL-si-dp4" firstAttribute="centerX" secondItem="Ae6-gT-v0Q" secondAttribute="centerX" constant="88" id="tJG-81-JI6"/>
+                            <constraint firstItem="XPL-si-dp4" firstAttribute="top" secondItem="Ae6-gT-v0Q" secondAttribute="top" id="tv7-Ug-2PZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="W9i-au-ocT" id="KIe-8w-5n8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
